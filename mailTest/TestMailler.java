@@ -27,10 +27,10 @@ public class TestMailler{
 			Message msg = new MimeMessage(session);
 			
 			//送信者の設定                                         
-			msg.setFrom(new InternetAddress("f.masaki1014@gmail.com"));
+			msg.setFrom(new InternetAddress("address));
 			
 			//宛先の設定
-			msg.setRecipients(Message.RecipientType.TO,InternetAddress.parse("tunatuna7255@yahoo.co.jp"));
+			msg.setRecipients(Message.RecipientType.TO,InternetAddress.parse("address"));
 			
 			//ここからメッセージに関する設定
 			
@@ -42,7 +42,7 @@ public class TestMailler{
 			
 			SMTPTransport t = (SMTPTransport)session.getTransport("smtp");
 			try{
-				t.connect("smtp.gmail.com","rabbit.lover.rop@gmail.com","passtest");
+				t.connect("smtp.gmail.com","address","pass");
 				t.sendMessage(msg,msg.getAllRecipients());
 				
 			}finally{
